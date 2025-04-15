@@ -1,0 +1,25 @@
+{
+  "name": "bip-boup",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "typescript"
+        ],
+        "path": "./typescript.json"
+      },
+      {
+        "language": [
+          "typescriptreact"
+        ],
+        "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "prisma"
+        ],
+        "path": "./prisma.json"
+      }
+    ]
+  }
+}

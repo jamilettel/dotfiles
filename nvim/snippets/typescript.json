@@ -1,0 +1,40 @@
+{
+  "query": {
+    "prefix": "query",
+    "description": "",
+    "body": [
+      "export const use$0Query = (",
+      "  opt?: QueryOptions<Awaited<ReturnType<typeof $1>>>",
+      ") =>",
+      "  useQuery({",
+      "    ...opt,",
+      "    queryFn: $1,",
+      "    queryKey: ['$1'],",
+      "  });",
+      ""
+    ]
+  },
+  "mutation": {
+    "prefix": "mutation",
+    "description": "mutation",
+    "body": [
+      "export const use$0Mutation = (",
+      "  opt?: MutationOptions<",
+      "    Awaited<ReturnType<typeof $1>>,",
+      "    Error,",
+      "    Parameters<typeof $1>[0]",
+      "  >",
+      ") => {",
+      "  const queryClient = useQueryClient();",
+      "  return useMutation({",
+      "    ...opt,",
+      "    mutationFn: $1,",
+      "    onSuccess(data, variables, context) {",
+      "      if (opt?.onSuccess) opt.onSuccess(data, variables, context);",
+      "    },",
+      "  });",
+      "}",
+      ""
+    ]
+  }
+}

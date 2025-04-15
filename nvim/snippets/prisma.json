@@ -1,0 +1,15 @@
+{
+  "model": {
+    "prefix": "mdl",
+    "body": [
+      "",
+      "model $0 {",
+      "\tid BigInt @id @default(autoincrement())",
+      "",
+      "\tcreatedAt DateTime @default(now()) @db.Timestamptz()",
+      "\tupdatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()",
+      "}",
+      ""
+    ]
+  }
+}
