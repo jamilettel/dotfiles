@@ -4,7 +4,11 @@
     "description": "",
     "body": [
       "export const use$0Query = (",
-      "  opt?: QueryOptions<Awaited<ReturnType<typeof $1>>>",
+      "opt?: Partial<",
+      "  UseQueryOptions<",
+      "    Awaited<ReturnType<typeof $1>>",
+      "  >",
+      ">,",
       ") =>",
       "  useQuery({",
       "    ...opt,",
