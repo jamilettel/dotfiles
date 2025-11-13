@@ -26,7 +26,7 @@ local M = {
         "rust",
       },
       modules = {},
-      auto_install = true,
+      auto_install = false,
       ignore_install = {},
       sync_install = false,
       highlight = { enable = true },
