@@ -11,7 +11,6 @@ return {
 			automatic_installation = true,
 			ensure_installed = {
 				"cssls",
-				"eslint",
 				"html",
 				"jsonls",
 				"ts_ls",
@@ -26,7 +25,6 @@ return {
 				"isort", -- python formatter
 				"ruff", -- python formatter
 				"pylint",
-				"eslint_d",
 			},
 		})
 	end,
