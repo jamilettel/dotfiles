@@ -69,3 +69,30 @@ vim.api.nvim_set_keymap(
 	":EslintFixAll<cr>",
 	{ noremap = true, silent = true, desc = "Show error in popup" }
 )
+
+-- copy filepath / directy
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cr",
+	':lua vim.fn.setreg("+", vim.fn.expand("%"))<cr>',
+
+	{ noremap = true, silent = true, desc = "Copy relative filepath" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>ca",
+	':lua vim.fn.setreg("+", vim.fn.expand("%:p"))<cr>',
+	{ noremap = true, silent = true, desc = "Copy absolute filepath" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cR",
+	':lua vim.fn.setreg("+", vim.fn.expand("%:h"))<cr>',
+	{ noremap = true, silent = true, desc = "Copy relative file directory" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cA",
+	':lua vim.fn.setreg("+", vim.fn.expand("%:p:h"))<cr>',
+	{ noremap = true, silent = true, desc = "Copy absolute file directory" }
+)
