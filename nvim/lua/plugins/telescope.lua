@@ -56,6 +56,6 @@ return {
 			{ desc = "Find string under cursor in cwd" }
 		)
 		keymap.set("n", "<leader>fc", "<cmd>Telescope git commits theme=ivy<cr>", { desc = "Find todos" })
-		keymap.set("n", "<leader>[", "<cmd>Telescope lsp_references theme=ivy<cr>", { desc = "Find references" })
+		keymap.set("n", "<C-[>", "<cmd>Telescope lsp_references theme=ivy<cr>", { desc = "Find references" })
 	end,
 }
