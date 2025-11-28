@@ -96,3 +96,31 @@ vim.api.nvim_set_keymap(
 	':lua vim.fn.setreg("+", vim.fn.expand("%:p:h"))<cr>',
 	{ noremap = true, silent = true, desc = "Copy absolute file directory" }
 )
+
+-- git
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gn",
+	":Gitsigns next_hunk<cr>",
+
+	{ noremap = true, silent = true, desc = "Next hunk" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gp",
+	":Gitsigns prev_hunk<cr>",
+
+	{ noremap = true, silent = true, desc = "Previous hunk" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gg",
+	":Gitsigns preview_hunk<cr>",
+	{ noremap = true, silent = true, desc = "Preview hunk" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gb",
+	":Gitsigns blame_line<cr>",
+	{ noremap = true, silent = true, desc = "Blame line" }
+)

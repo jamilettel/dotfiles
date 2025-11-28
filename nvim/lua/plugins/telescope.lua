@@ -8,9 +8,15 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
-			pickers = {
-				find_files = {
-					hidden = true,
+			defaults = {
+				hidden = true,
+				-- path_display = {
+				-- 	"smart",
+				-- },
+				layout_strategy = "vertical",
+				layout_config = {
+					prompt_position = "bottom",
+					height = 0.95,
 				},
 			},
 			extensions = {
@@ -44,18 +50,13 @@ return {
 		end, {
 			desc = "Fuzzy find files in buffer cwd",
 		})
-		keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files theme=ivy<cr>", {
+		keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", {
 			desc = "Fuzzy find files in cwd",
 		})
-		keymap.set("n", "<leader>ps", "<cmd>Telescope live_grep theme=ivy<cr>", { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers theme=ivy<cr>", { desc = "Find string in cwd" })
-		keymap.set(
-			"n",
-			"<leader>fs",
-			"<cmd>Telescope git_status theme=ivy<cr>",
-			{ desc = "Find string under cursor in cwd" }
-		)
-		keymap.set("n", "<leader>fc", "<cmd>Telescope git commits theme=ivy<cr>", { desc = "Find todos" })
-		keymap.set("n", "<leader>[", "<cmd>Telescope lsp_references theme=ivy<cr>", { desc = "Find references" })
+		keymap.set("n", "<leader>ps", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
+		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
+		keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
+		keymap.set("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
+		keymap.set("n", "<leader>[", "<cmd>Telescope lsp_references<cr>", { desc = "Find references" })
 	end,
 }
