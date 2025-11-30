@@ -175,5 +175,25 @@
       "}",
       ""
     ]
+  },
+  "sleep": {
+    "prefix": "sleep",
+    "description": "sleep",
+    "body": ["await new Promise((res) => setTimeout(() => res(null), $0));"]
+  },
+  "use memo": {
+    "prefix": "usem",
+    "description": "export default function",
+    "body": ["const $1 = useMemo(() => {$0}, []);"]
+  },
+  "use effect": {
+    "prefix": "usef",
+    "description": "export default function",
+    "body": ["useEffect(() => {$0}, []);"]
+  },
+  "use state": {
+    "prefix": "uses",
+    "description": "export default function",
+    "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"]
   }
 }

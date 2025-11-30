@@ -40,5 +40,10 @@
       "}",
       ""
     ]
+  },
+  "sleep": {
+    "prefix": "sleep",
+    "description": "sleep",
+    "body": ["await new Promise((res) => setTimeout(() => res(null), $0));"]
   }
 }
