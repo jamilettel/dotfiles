@@ -125,3 +125,7 @@ vim.api.nvim_set_keymap(
 	":Gitsigns blame_line<cr>",
 	{ noremap = true, silent = true, desc = "Blame line" }
 )
+
+-- tabs
+vim.api.nvim_set_keymap("n", "<leader>,", ":tabnext -<cr>", { noremap = true, silent = true, desc = "Blame line" })
+vim.api.nvim_set_keymap("n", "<leader>.", ":tabnext +<cr>", { noremap = true, silent = true, desc = "Blame line" })
