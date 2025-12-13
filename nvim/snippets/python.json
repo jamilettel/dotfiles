@@ -1,0 +1,13 @@
+{
+  "debuglog": {
+    "prefix": "dbg",
+    "description": "",
+    "body": [
+      "# TODO: REMOVE JAMIL",
+      "print('-- DEBUG JAMIL --')",
+      "print($0)",
+      "print('-- DEBUG JAMIL --')",
+      "# TODO: REMOVE JAMIL"
+    ]
+  }
+}

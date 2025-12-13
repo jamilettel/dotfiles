@@ -27,7 +27,7 @@ o.splitright = true
 o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 o.termguicolors = true
 o.wrap = false
-o.scrolloff = 5
+o.scrolloff = 7
 o.ignorecase = true
 o.smartcase = true
 
