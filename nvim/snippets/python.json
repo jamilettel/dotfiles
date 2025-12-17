@@ -9,5 +9,13 @@
       "print('-- DEBUG JAMIL --')",
       "# TODO: REMOVE JAMIL"
     ]
+  },
+  "class": {
+    "prefix": "class",
+    "description": "",
+    "body": [
+      "class ${TM_FILENAME_BASE/(^[a-z])|((?<=[_])[a-z])|[_]/${1:/upcase}${2:/upcase}/g}:",
+      "    ${0:pass}"
+    ]
   }
 }
