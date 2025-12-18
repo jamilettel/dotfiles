@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { silent = true, desc = "Explore" })
+vim.keymap.set("n", "<leader>pv", function()
+	vim.cmd.Ex()
+	vim.cmd.set("number", "relativenumber")
+end, { silent = true, desc = "Explore" })
 
 vim.api.nvim_set_keymap(
 	"n",
