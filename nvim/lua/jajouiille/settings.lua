@@ -32,3 +32,4 @@ o.ignorecase = true
 o.smartcase = true
 
 -- require("telescope").load_extension("project")
+vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])

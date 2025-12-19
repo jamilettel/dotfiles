@@ -14,10 +14,8 @@ return {
 				-- 	"smart",
 				-- },
 				layout_strategy = "vertical",
-				layout_config = {
-					prompt_position = "bottom",
-					height = 0.95,
-				},
+				layout_config = { prompt_position = "bottom", height = 0.95, width = 0.99 },
+				fname_width = 100,
 			},
 			extensions = {
 				["zf-native"] = {
@@ -50,13 +48,29 @@ return {
 		end, {
 			desc = "Fuzzy find files in buffer cwd",
 		})
+
 		keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", {
 			desc = "Fuzzy find files in cwd",
 		})
-		keymap.set("n", "<leader>ps", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
-		keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
-		keymap.set("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
-		keymap.set("n", "<leader>[", "<cmd>Telescope lsp_references<cr>", { desc = "Find references" })
+
+		keymap.set("n", "<leader>ps", function()
+			builtin.live_grep({ fname_width = 100 })
+		end, { desc = "Grep whole project" })
+
+		keymap.set("n", "<leader>pS", function()
+			builtin.live_grep({ fname_width = 100, cwd = utils.buffer_dir() })
+		end, { desc = "Grep cwd" })
+
+		keymap.set("n", "<leader>fb", function()
+			builtin.buffers({ fname_width = 100 })
+		end, { desc = "Find string in cwd" })
+
+		keymap.set("n", "<leader>fs", function()
+			builtin.git_status({ fname_width = 100 })
+		end, { desc = "Find string under cursor in cwd" })
+
+		keymap.set("n", "<leader>[", function()
+			builtin.lsp_references({ fname_width = 100 })
+		end, { desc = "Find references" })
 	end,
 }
