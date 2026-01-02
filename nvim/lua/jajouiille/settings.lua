@@ -30,6 +30,7 @@ o.wrap = false
 o.scrolloff = 7
 o.ignorecase = true
 o.smartcase = true
+o.scroll = 10
 
 -- require("telescope").load_extension("project")
 vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
