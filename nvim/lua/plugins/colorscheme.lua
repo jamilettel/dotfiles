@@ -30,6 +30,7 @@ return {
 			},
 		})
 		vim.cmd("colorscheme kanagawa")
+		vim.cmd("highlight EndOfBuffer guifg=#555555")
 	end,
 }
 
