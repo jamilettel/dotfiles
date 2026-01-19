@@ -124,6 +124,18 @@ vim.api.nvim_set_keymap(
 	":Gitsigns blame_line<cr>",
 	{ noremap = true, silent = true, desc = "Blame line" }
 )
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>grh",
+	":Gitsigns reset_hunk<cr>",
+	{ noremap = true, silent = true, desc = "Reset hunk" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>grb",
+	":Gitsigns reset_buffer<cr>",
+	{ noremap = true, silent = true, desc = "Reset buffer" }
+)
 
 vim.api.nvim_set_keymap("n", "<leader>,", ":tabnext -<cr>", { noremap = true, silent = true, desc = "Blame line" })
 vim.api.nvim_set_keymap("n", "<leader>.", ":tabnext +<cr>", { noremap = true, silent = true, desc = "Blame line" })

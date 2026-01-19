@@ -61,6 +61,10 @@ return {
 			builtin.live_grep({ fname_width = 100, cwd = utils.buffer_dir() })
 		end, { desc = "Grep cwd" })
 
+		keymap.set("n", "<leader>pq", function()
+			builtin.quickfix({ fname_width = 100 })
+		end, { desc = "Quickfix" })
+
 		keymap.set("n", "<leader>fb", function()
 			builtin.buffers({ fname_width = 100 })
 		end, { desc = "Find string in cwd" })
