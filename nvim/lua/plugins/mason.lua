@@ -13,7 +13,6 @@ return {
 				"cssls",
 				"html",
 				"jsonls",
-				"ts_ls",
 				"tailwindcss",
 			},
 		})
