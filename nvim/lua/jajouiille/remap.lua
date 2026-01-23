@@ -66,7 +66,7 @@ end, { silent = true, noremap = true, desc = "toggle signature" })
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>E",
-	":EslintFixAll<cr>",
+	":LspEslintFixAll<cr>",
 	{ noremap = true, silent = true, desc = "Show error in popup" }
 )
 
