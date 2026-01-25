@@ -1,5 +1,3 @@
--- ~/nvim/lua/slydragonn/plugins/lspconfig.lua
-
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
