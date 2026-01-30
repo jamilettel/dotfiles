@@ -1,0 +1,34 @@
+command=./$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[temperature]
+label=🌡️
+interval=10
+
+[memory]
+label=🧠 
+separator=false
+interval=30
+
+[disk]
+label=💾 
+#DIR=/mnt/data
+interval=30
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+
+[volume-pipewire]
+#label=🎵 
+interval=1
+signal=10
+STEP=5%
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+label=⚡
+interval=30
