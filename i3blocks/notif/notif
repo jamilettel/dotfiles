@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+NOTIFS=`swaync-client -c`
+
+echo "🔔 $NOTIFS"
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  swaync-client -t
+fi

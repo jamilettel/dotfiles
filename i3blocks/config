@@ -2,6 +2,9 @@ command=./$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[notif]
+interval=5
+
 [temperature]
 label=🌡️
 interval=10
@@ -27,8 +30,5 @@ signal=10
 STEP=5%
 
 # Battery indicator
-#
-# The battery instance defaults to 0.
 [battery]
-label=⚡
 interval=30
