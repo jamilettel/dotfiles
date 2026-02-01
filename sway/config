@@ -5,6 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 xwayland disable
 exec --no-startup-id xwayland-satellite :0
+exec --no-startup-id nm-applet
 
 ### Variables
 #
@@ -170,6 +171,14 @@ input type:keyboard {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+  
+
+for_window [app_id="galculator"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_role="dialog"] floating enable
+assign [class="firefox"] -> 3
+assign [class="^Urxvt$" instance="^htop$"] -> 9
+
 #
 # Scratchpad:
 #
@@ -206,6 +215,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+hide_edge_borders smart
 #
 # Utilities:
 #
