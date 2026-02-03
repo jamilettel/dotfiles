@@ -7,6 +7,14 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
+				-- javascript = { "biome" },
+				-- typescript = { "biome" },
+				-- javascriptreact = { "biome" },
+				-- typescriptreact = { "biome" },
+				-- css = { "biome" },
+				-- html = { "biome" },
+				-- json = { "biome" },
+				sql = { "pg_format" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
