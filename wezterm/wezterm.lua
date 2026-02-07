@@ -23,7 +23,7 @@ config.keys = {
 		action = wezterm.action.DisableDefaultAssignment,
 	},
 	{
-		key = " ",
+		key = "Space",
 		mods = "SHIFT",
 		action = wezterm.action.DisableDefaultAssignment,
 	},

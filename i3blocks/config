@@ -1,0 +1,35 @@
+command=./$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[notif]
+interval=5
+
+[temperature]
+label=🌡️
+interval=10
+SENSOR_CHIP=coretemp-isa-0000
+
+[memory]
+label=🧠 
+separator=false
+interval=30
+
+[disk]
+label=💾 
+#DIR=/mnt/data
+interval=30
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+
+[volume-pipewire]
+#label=🎵 
+interval=1
+signal=10
+STEP=5%
+
+# Battery indicator
+[battery]
+interval=30

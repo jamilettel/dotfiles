@@ -1,8 +1,17 @@
 /*
 !.gitignore
+!README.md
 
 !/nvim
 !/nvim/*
 
 !/wezterm
 !/wezterm/*
+
+!/i3blocks
+!/i3blocks/*
+
+!/sway
+!/sway/*
+
+!zshrc
