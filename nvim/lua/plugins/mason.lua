@@ -24,7 +24,7 @@ return {
 				"isort", -- python formatter
 				"ruff", -- python formatter
 				"pylint",
-				"eslint_d",
+				-- "eslint_d",
 			},
 		})
 	end,
