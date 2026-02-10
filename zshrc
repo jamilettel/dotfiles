@@ -39,3 +39,5 @@ compdef _dd d
 
 alias ls=lsd
 alias lg=lazygit
+
+export EDITOR=nvim

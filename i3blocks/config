@@ -8,7 +8,6 @@ interval=5
 [temperature]
 label=🌡️
 interval=10
-SENSOR_CHIP=coretemp-isa-0000
 
 [memory]
 label=🧠 

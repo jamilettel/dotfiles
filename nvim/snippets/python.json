@@ -1,21 +1,34 @@
 {
-  "debuglog": {
-    "prefix": "dbg",
-    "description": "",
-    "body": [
-      "# TODO: REMOVE JAMIL",
-      "print('-- DEBUG JAMIL --')",
-      "print($0)",
-      "print('-- DEBUG JAMIL --')",
-      "# TODO: REMOVE JAMIL"
-    ]
-  },
-  "class": {
-    "prefix": "class",
-    "description": "",
-    "body": [
-      "class ${TM_FILENAME_BASE/(^[a-z])|((?<=[_])[a-z])|[_]/${1:/upcase}${2:/upcase}/g}:",
-      "    ${0:pass}"
-    ]
-  }
+    "debuglog": {
+        "prefix": "dbg",
+        "description": "",
+        "body": [
+            "# TODO: REMOVE JAMIL",
+            "print('-- DEBUG JAMIL --')",
+            "print($0)",
+            "print('-- DEBUG JAMIL --')",
+            "# TODO: REMOVE JAMIL"
+        ]
+    },
+    "debuglogpretty": {
+        "prefix": "dbgp",
+        "description": "",
+        "body": [
+            "# TODO: REMOVE JAMIL",
+            "print('-- DEBUG JAMIL --')",
+            "from pprint import pprint",
+            "",
+            "pprint($0)",
+            "print('-- DEBUG JAMIL --')",
+            "# TODO: REMOVE JAMIL"
+        ]
+    },
+    "class": {
+        "prefix": "class",
+        "description": "",
+        "body": [
+            "class ${TM_FILENAME_BASE/(^[a-z])|((?<=[_])[a-z])|[_]/${1:/upcase}${2:/upcase}/g}:",
+            "    ${0:pass}"
+        ]
+    }
 }
