@@ -76,5 +76,9 @@ return {
 		keymap.set("n", "<leader>[", function()
 			builtin.lsp_references({ fname_width = 100 })
 		end, { desc = "Find references" })
+
+		keymap.set("n", "<leader>r", function()
+			builtin.resume({ fname_width = 100 })
+		end, { desc = "Telescope resume" })
 	end,
 }
