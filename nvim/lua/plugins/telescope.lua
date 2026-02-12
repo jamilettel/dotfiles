@@ -10,9 +10,6 @@ return {
 		require("telescope").setup({
 			defaults = {
 				hidden = true,
-				-- path_display = {
-				-- 	"smart",
-				-- },
 				layout_strategy = "vertical",
 				layout_config = { prompt_position = "bottom", height = 0.95, width = 0.99 },
 				fname_width = 100,
