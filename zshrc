@@ -24,8 +24,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export DASHDOC_PROJECT_DIRECTORY=~/delivery/dashdoc
 # d() { python3 "$DASHDOC_PROJECT_DIRECTORY/dd.py" "$@"; }
-dd() { python3 "$DASHDOC_PROJECT_DIRECTORY/dd.py" "$@"; }
-alias cdd="cd $DASHDOC_PROJECT_DIRECTORY"
+dd() { uv run "$DASHDOC_PROJECT_DIRECTORY/dd.py" "$@"; }
+export VIRTUAL_ENV=$DASHDOC_PROJECT_DIRECTORY/.venv
+alias cdd="cd $DASHDOC_PROJECT_DIRECTORY && source ./.venv/bin/activate"
 
 fpath=("/home/jamil/delivery/dashdoc/.dd" $fpath)
 autoload -U compinit && compinit
@@ -38,3 +39,5 @@ alias ls=lsd
 alias lg=lazygit
 
 export EDITOR=nvim
+
+if [ -f './.venv/bin/activate' ]; then source ./.venv/bin/activate; fi
