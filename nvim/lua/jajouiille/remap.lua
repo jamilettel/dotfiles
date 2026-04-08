@@ -58,6 +58,9 @@ vim.api.nvim_set_keymap(
 	":lua vim.lsp.buf.rename()<CR>",
 	{ noremap = true, silent = true, desc = "Rename LSP" }
 )
+vim.keymap.set({ "n" }, "<leader>po", function()
+	vim.api.nvim_command("LspPyrightOrganizeImports")
+end, { noremap = true, silent = true, desc = "Organize imports" })
 
 vim.keymap.set({ "i" }, "<C-l>", function()
 	require("lsp_signature").toggle_float_win()
