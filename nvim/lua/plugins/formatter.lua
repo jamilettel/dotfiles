@@ -15,6 +15,8 @@ return {
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
+				vue = { "prettier" },
+				sql = { "pg_format" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				python = { "ruff_format" },

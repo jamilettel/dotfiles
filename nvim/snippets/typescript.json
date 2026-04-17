@@ -18,6 +18,29 @@
       ""
     ]
   },
+  "mutationv": {
+    "prefix": "mutationv",
+    "description": "mutation vue",
+    "body": [
+      "export const use$0Mutation = (",
+      "  opt?: MutationOptions<",
+      "    Awaited<ReturnType<typeof $1>>,",
+      "    Error,",
+      "    Parameters<typeof $1>[0]",
+      "  >",
+      ") => {",
+      "  const queryClient = useQueryClient();",
+      "  return useMutation({",
+      "    ...opt,",
+      "    mutationFn: $1,",
+      "    onSuccess(data, variables, ...args) {",
+      "      if (opt?.onSuccess) opt.onSuccess(data, variables, ...args);",
+      "    },",
+      "  });",
+      "}",
+      ""
+    ]
+  },
   "mutation": {
     "prefix": "mutation",
     "description": "mutation",
