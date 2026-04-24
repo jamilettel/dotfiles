@@ -13,3 +13,6 @@
 
 !/sway
 !/sway/*
+
+!/tmux
+!/tmux/*
