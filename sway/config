@@ -3,8 +3,8 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-xwayland disable
-exec --no-startup-id xwayland-satellite :0
+# xwayland disable
+exec --no-startup-id xwayland-satellite :1
 exec --no-startup-id nm-applet
 
 ### Variables
@@ -19,7 +19,7 @@ set $right l
 # Your preferred terminal emulator
 set $term konsole
 # Your preferred application launcher
-set $menu DISPLAY=:0 wofi --show=drun
+set $menu DISPLAY=:1 wofi --show=drun
 
 ### Output configuration 
 #
