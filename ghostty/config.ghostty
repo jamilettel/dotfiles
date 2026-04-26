@@ -2,3 +2,4 @@ theme = Monokai Remastered
 font-size = 11
 window-decoration = false
 app-notifications = no-clipboard-copy
+mouse-hide-while-typing = true
