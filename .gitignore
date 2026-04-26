@@ -5,6 +5,9 @@
 !/nvim
 !/nvim/*
 
+!/ghostty
+!/ghostty/*
+
 !/wezterm
 !/wezterm/*
 
