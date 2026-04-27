@@ -8,6 +8,12 @@
 !/wezterm
 !/wezterm/*
 
+!/ghostty
+!/ghostty/*
+
+!/tmux
+!/tmux/*
+
 !/i3blocks
 !/i3blocks/*
 

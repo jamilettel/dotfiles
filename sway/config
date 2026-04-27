@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-# xwayland disable
+xwayland disable
 exec --no-startup-id xwayland-satellite :1
 exec --no-startup-id nm-applet
 
@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term DISPLAY=:1 wezterm
+set $term DISPLAY=:1 ghostty
 # Your preferred application launcher
 set $menu DISPLAY=:1 wofi --show=drun
 
@@ -81,6 +81,7 @@ input type:keyboard {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+b exec firefox
     bindsym $mod+period exec wofi-emoji
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -155,7 +156,7 @@ input type:keyboard {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    # bindsym $mod+b splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles

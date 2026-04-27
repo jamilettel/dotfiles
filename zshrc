@@ -41,3 +41,6 @@ alias lg=lazygit
 export EDITOR=nvim
 
 if [ -f './.venv/bin/activate' ]; then source ./.venv/bin/activate; fi
+
+alias ts="tmux new -A -s"
+alias tsd="tmux new -A -s dd -c $DASHDOC_PROJECT_DIRECTORY"
