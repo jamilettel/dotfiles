@@ -30,5 +30,25 @@
             "class ${TM_FILENAME_BASE/(^[a-z])|((?<=[_])[a-z])|[_]/${1:/upcase}${2:/upcase}/g}:",
             "    ${0:pass}"
         ]
+    },
+    "ai": {
+        "prefix": "ai",
+        "description": "",
+        "body": ["assert isinstance($1,$2)"]
+    },
+    "ani": {
+        "prefix": "ani",
+        "description": "",
+        "body": ["assert isinstance($1,$2)"]
+    },
+    "isin": {
+        "prefix": "isin",
+        "description": "",
+        "body": ["if isinstance($1,$2):", "  ${0:pass}"]
+    },
+    "nisin": {
+        "prefix": "nisin",
+        "description": "",
+        "body": ["if not isinstance($1,$2):", "  ${0:pass}"]
     }
 }

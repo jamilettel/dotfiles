@@ -66,12 +66,7 @@ vim.keymap.set({ "i" }, "<C-l>", function()
 	require("lsp_signature").toggle_float_win()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>E",
-	":LspEslintFixAll<cr>",
-	{ noremap = true, silent = true, desc = "Show error in popup" }
-)
+vim.api.nvim_set_keymap("n", "<leader>E", ":BiomeFixAll<cr>", { noremap = true, silent = true, desc = "Fix all ts" })
 
 -- copy filepath / directy
 vim.api.nvim_set_keymap(
