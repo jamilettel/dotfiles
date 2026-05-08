@@ -23,8 +23,8 @@ font pango: FiraMono Nerd Font
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec --no-startup-id xset r rate 200 35
-exec --no-startup-id setxkbmap us altgr-intl
+exec_always --no-startup-id xset r rate 200 35
+exec_always --no-startup-id setxkbmap us altgr-intl
 exec_always --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144.00 --left-of HDMI-0 --primary
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -200,7 +200,7 @@ bindsym $mod+Shift+s exec flameshot gui
 bar {
         status_command i3blocks
         font pango: FiraMono Nerd Font
-        output DP-4 
+        output DP-4
 }
 
 bar {
