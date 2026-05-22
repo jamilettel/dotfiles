@@ -41,6 +41,8 @@ return {
 					args = {
 						"-l",
 						"postgresql",
+						"-c",
+						'{"tabWidth": 2, "keywordCase": "upper", "linesBetweenQueries": 2}',
 					},
 				},
 			},
