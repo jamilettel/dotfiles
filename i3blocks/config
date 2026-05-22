@@ -32,3 +32,8 @@ STEP=5%
 # Battery indicator
 [battery]
 interval=30
+
+# Battery indicator
+[battery]
+BAT_NUMBER=1
+interval=30
