@@ -31,15 +31,41 @@
             "    ${0:pass}"
         ]
     },
-    "ai": {
+    "iserr": {
+        "prefix": "iserr",
+        "description": "",
+        "body": ["if isinstance($1, Err):", "  ${0:pass}"]
+    },
+    "isok": {
+        "prefix": "isok",
+        "description": "",
+        "body": ["if isinstance($1, Ok):", "  ${0:pass}"]
+    },
+    "ain": {
         "prefix": "ai",
         "description": "",
         "body": ["assert isinstance($1,$2)"]
     },
-    "ani": {
+    "anin": {
         "prefix": "ani",
         "description": "",
-        "body": ["assert isinstance($1,$2)"]
+        "body": ["assert not isinstance($1,$2)"]
+    },
+    "match": {
+        "prefix": "match",
+        "description": "",
+        "body": ["match $1:", "  case $0:", "    pass"]
+    },
+    "matchr": {
+        "prefix": "matchr",
+        "description": "",
+        "body": [
+            "match $1:",
+            "  case Err(err):",
+            "    return Err(err)",
+            "  case Ok($0):",
+            "    pass"
+        ]
     },
     "isin": {
         "prefix": "isin",
