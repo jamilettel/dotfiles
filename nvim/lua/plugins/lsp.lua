@@ -9,31 +9,31 @@ return {
 	},
 	config = function()
 		vim.lsp.inlay_hint.enable()
-		vim.lsp.config("ty", {
-			settings = {
-				ty = {
-					disableLanguageServices = false,
-					diagnosticMode = "openFilesOnly",
-					inlayHints = {
-						-- we use basedpyright for this
-						variableTypes = false,
-						callArgumentNames = false,
-					},
-					experimental = {
-						rename = false,
-						autoImport = true,
-					},
-				},
-			},
-			init_options = {
-				logFile = nil,
-				logLevel = "info",
-			},
-		})
+		-- vim.lsp.config("ty", {
+		-- 	settings = {
+		-- 		ty = {
+		-- 			disableLanguageServices = false,
+		-- 			diagnosticMode = "openFilesOnly",
+		-- 			inlayHints = {
+		-- 				-- we use basedpyright for this
+		-- 				variableTypes = false,
+		-- 				callArgumentNames = false,
+		-- 			},
+		-- 			experimental = {
+		-- 				rename = false,
+		-- 				autoImport = true,
+		-- 			},
+		-- 		},
+		-- 	},
+		-- 	init_options = {
+		-- 		logFile = nil,
+		-- 		logLevel = "info",
+		-- 	},
+		-- })
 		vim.lsp.config("basedpyright", {
 			enabled = true,
 			settings = {
-				disableOrganizeImports = false,
+				-- disableOrganizeImports = false,
 				basedpyright = {
 					analysis = {
 						-- ignore = { "*" },
@@ -53,8 +53,28 @@ return {
 				},
 			},
 		})
-		vim.lsp.enable("ty")
+		-- vim.lsp.enable("ty")
 		vim.lsp.enable("basedpyright")
+
+		vim.lsp.config("rust_analyzer", {
+			settings = {
+				["rust-analyzer"] = {
+					files = { watcher = "server" },
+					cargo = { targetDir = true },
+					check = { command = "clippy" },
+					inlayHints = {
+						bindingModeHints = { enabled = true },
+						closureCaptureHints = { enabled = true },
+						closureReturnTypeHints = { enable = "always" },
+						maxLength = 100,
+					},
+					rustc = { source = "discover" },
+				},
+			},
+			root_markers = { { "Config.toml" }, ".git" },
+		})
+
+		vim.lsp.enable("rust_analyzer")
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(args)
