@@ -41,4 +41,13 @@ vim.lsp.config("vtsls", {
 		-- end,
 	},
 })
+
+local clangd_opts = {
+	-- Add custom command-line flags:
+	cmd = { "clangd", "--background-index", "--clang-tidy" },
+	-- Customize clangd's behaviour:
+	init_options = { fallbackFlags = { "-Wall", "-Werror" } },
+}
+vim.lsp.enable("clangd", clangd_opts)
+
 -- vim.lsp.enable({ "vtsls" })
