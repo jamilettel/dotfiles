@@ -8,28 +8,7 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		vim.lsp.inlay_hint.enable()
-		-- vim.lsp.config("ty", {
-		-- 	settings = {
-		-- 		ty = {
-		-- 			disableLanguageServices = false,
-		-- 			diagnosticMode = "openFilesOnly",
-		-- 			inlayHints = {
-		-- 				-- we use basedpyright for this
-		-- 				variableTypes = false,
-		-- 				callArgumentNames = false,
-		-- 			},
-		-- 			experimental = {
-		-- 				rename = false,
-		-- 				autoImport = true,
-		-- 			},
-		-- 		},
-		-- 	},
-		-- 	init_options = {
-		-- 		logFile = nil,
-		-- 		logLevel = "info",
-		-- 	},
-		-- })
+		-- vim.lsp.inlay_hint.enable()
 		vim.lsp.config("basedpyright", {
 			enabled = true,
 			settings = {
