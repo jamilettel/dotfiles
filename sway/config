@@ -17,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term DISPLAY=:1 ghostty
+set $term DISPLAY=:1 alacritty
 # Your preferred application launcher
 set $menu DISPLAY=:1 wofi --show=drun
 
