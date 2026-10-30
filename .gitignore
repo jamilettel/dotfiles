@@ -23,3 +23,6 @@
 
 !/tmux
 !/tmux/*
+
+!/alacritty
+!/alacritty/*

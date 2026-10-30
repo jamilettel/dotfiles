@@ -16,7 +16,7 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 				vue = { "prettier" },
-				sql = { "pg_format" },
+				sql = { "sql_formatter" },
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				python = { "ruff_format" },
@@ -37,6 +37,14 @@ return {
 				end
 				return { lsp_fallback = true, async = false, timeout_ms = 1000 }
 			end,
+			formatters = {
+				sql_formatter = {
+					args = {
+						"-l",
+						"postgresql",
+					},
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>F", function()

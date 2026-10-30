@@ -18,3 +18,4 @@ alias lg=lazygit
 alias ts="tmux new -A -s"
 
 export EDITOR=nvim
+export PATH="$PATH:$(go env GOPATH)/bin"

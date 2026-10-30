@@ -17,7 +17,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 First, install `yay`. Non exhaustive list.
 
 ```bash
-sudo pacman -S luarocks lua51 swaync i3blocks wofi ripgrep xwayland-satellite lazygit acpi network-manager-applet sway-contrib swappy
+sudo pacman -S luarocks lua51 swaync i3blocks wofi ripgrep xwayland-satellite lazygit acpi network-manager-applet sway-contrib swappy alacritty
 yay -S wofi-emoji
 ```
 
