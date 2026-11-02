@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/modus_vivendi.toml"
+    "~/.config/alacritty/themes/themes/azu.toml"
 ]
 
 [font]
